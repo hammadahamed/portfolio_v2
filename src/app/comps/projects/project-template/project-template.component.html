@@ -1,0 +1,31 @@
+<div class="project-wrapper">
+    <!-- ----------------------------- DESCRIPTION ----------------------------- -->
+    <div class="project-description">
+        <p class="numerics">#{{index+1}}</p>
+
+        <p class="project-name">
+            <!-- <span class="index">
+                #{{index+1}}
+            </span> -->
+            {{project.projectName}}
+        </p>
+        <div class="labels">
+            <div *ngFor="let label of project.labels; let i = index" class="label"
+                [ngStyle]="{'background-color': labelColor[i]}">
+                <p>{{label}}</p>
+            </div>
+        </div>
+
+        <p class="description">{{project.description}}</p>
+    </div>
+
+
+    <!-- ------------------------------- IMAGES -------------------------------- -->
+    <div class="project-images">
+        <div class="project-image" *ngFor="let imgSrc of project.imageList; let i = index">
+            <div class="image-wrapper">
+                <img [ngClass]="getPlatformClass(project.platformView)" [src]="imgSrc" alt="">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+.skill-list {
+    box-sizing: border-box;
+    padding: 0;
+    @media only screen and (min-width: 768px) {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+.skills {
+    display: flex;
+    gap: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-wrapper {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    // background: red;
+    border-radius: 50%;
+    // align-items: center;
+    justify-content: center;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+

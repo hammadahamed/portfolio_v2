@@ -1,1 +1,146 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    transition: all 1s ease;
+}
+
+html {
+    width: 100vw;
+    background-color: rgba($color: #ffffff, $alpha: 1) !important;
+}
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.section-heading {
+    margin: 0;
+    padding: 0;
+    color: var(--bg-color);
+    -webkit-text-fill-color: var(--bg-color); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: var(--heading-stroke-width);
+    -webkit-text-stroke-color: var(--section-heading-color);
+    font-size: 60px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media only screen and (min-width: 768px) {
+        font-size: 70px;
+        margin-left: 50px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+.section-heading-wrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    @media only screen and (min-width: 768px) {
+        text-align: left;
+        display: block;
+    }
+}
+
+:root {
+    /* -------------------------------- DURATIONS ------------------------------- */
+    --intro-delay: 4s;
+    --intro-delay-1: 5s;
+    --intro-delay-2: 6s;
+    --intro-delay-3: 7s;
+
+    /* --------------------------------- NUMBERS -------------------------------- */
+    --intro-text-opacity: 1;
+    --heading-stroke-width: 1.5px;
+
+    /* --------------------------------- COLORS --------------------------------- */
+    --app-primary-color: #7a2195;
+    --bg-color: white;
+    --top-nav-bottom-bar: transparent;
+    --heading-text: rgb(39, 39, 39);
+    --subtitle-text: black;
+    --social-bg: rgba(1, 1, 1);
+    --scroll-bar-thumb: #aeaeae;
+    --section-heading-color: rgba(1, 1, 1, 0.75);
+    --project-description-color: rgba(0, 0, 0, 0.7);
+    --card-bg-color: #151515;
+}
+
+[data-theme="dark"] {
+    /* --------------------------------- NUMBERS -------------------------------- */
+    --intro-text-opacity: 0.7;
+    --heading-stroke-width: 0.5px;
+
+    /* --------------------------------- COLORS --------------------------------- */
+    --bg-color: #1a1a1a;
+    --top-nav-bottom-bar: transparent;
+    --heading-text: rgb(223, 223, 223);
+    --subtitle-text: white;
+    --social-bg: rgba(1, 1, 1);
+    --scroll-bar-thumb: #363636;
+    --section-heading-color: white;
+    --project-description-color: rgba(255, 255, 255, 0.5);
+    --card-bg-color: #151515;
+}
+
+
+.cta-button {
+    display: flex;
+    justify-content: center;
+    color: var(--heading-text);
+    cursor: pointer;
+
+    p {
+        margin: 0;
+        background-color: var(--card-bg-color);
+        padding: 10px;
+        width: 125px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        transition-duration: .2s;
+
+        a{
+            color: var(--heading-text);
+            text-decoration: none;
+        }
+    }
+    p:hover {
+        opacity: .5;
+    }
+}
+
+/* ---------------------------- CUSTOM SCROLL-BAR --------------------------- */
+
+*::-webkit-scrollbar {
+    /* @apply w-1.5 h-1; */
+    width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+    /* @apply rounded-full bg-gray-100; */
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+    /* @apply w-1.5 h-1 bg-gray-400 bg-opacity-60 rounded-full; */
+    width: 2px;
+    border-radius: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-track-piece {
+    background: transparent;
+    width: 10px;
+}
+
+html {
+    scrollbar-color: #abadb1;
+    scrollbar-width: 2px;
+}

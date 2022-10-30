@@ -1,0 +1,17 @@
+<div class="section-heading-wrapper">
+    <p class="section-heading">PROJECTS</p>
+</div>
+<div class="projects">
+    <div class="project" *ngFor="let project of projects; let i = index">
+        <app-project-template [project]="project" [index]="i"> </app-project-template>
+    </div>
+</div>
+
+<div class="cta-button">
+    <p>
+        <a href="https://github.com/hammadahamed" target="_blank">See more ...</a>
+    </p>
+</div>
+
+<br>
+<br>

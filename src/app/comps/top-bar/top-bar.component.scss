@@ -1,0 +1,42 @@
+.top-bar-wrap {
+    z-index: 1000;
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.right-bar-wrap {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media only screen and (min-width: 768px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.right-bar {
+    overflow: hidden;
+    height: 50px;
+    width: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    margin-left: 20px;
+    animation: horizontal-expansion 1s ease var(--intro-delay) forwards;
+    background-color: var(--top-nav-bottom-bar);
+}
+
+@keyframes horizontal-expansion {
+    to {
+        width: max-content;
+    }
+}

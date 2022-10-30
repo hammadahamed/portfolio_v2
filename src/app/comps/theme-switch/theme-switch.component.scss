@@ -1,0 +1,70 @@
+$sun-moon-diameter: 18px;
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+.sun-moon {
+    height: $sun-moon-diameter;
+    width: $sun-moon-diameter;
+    border-radius: 50%;
+    background-color: gold;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    animation: expansion 0.5s ease var(--intro-delay) forwards;
+}
+
+.sun-moon:hover {
+    transform: scale(1.2);
+}
+.sun-moon-wrap {
+    transition: all 0.5s ease;
+}
+
+.light-switch {
+    filter: blur(4px);
+    padding: 3px;
+}
+
+.dark-switch {
+    border: 0 dashed transparent;
+    padding: 2px;
+    border-radius: 50%;
+    filter: blur(0);
+}
+
+.dark-switch > .sun-moon {
+    background-color: transparent;
+    box-shadow: inset -6px -4px 1px 1px #fff;
+}
+
+@keyframes expansion {
+    from {
+        height: 0;
+        width: 0;
+    }
+    to {
+        height: $sun-moon-diameter;
+        width: $sun-moon-diameter;
+    }
+}
+
+
+/* ------------------------------ PRIMARY COLoR ----------------------------- */
+$primary-witch-dimension: 18px;
+$primary-witch-dimension-lg: 20px;
+
+.primary-color {
+    height: $primary-witch-dimension;
+    width: $primary-witch-dimension;
+    background-color: rgb(130, 29, 130);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.primary-color:hover {
+   transform: scale(1.2);
+}

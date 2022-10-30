@@ -1,0 +1,295 @@
+$header-and-subtitle-width: 200px;
+$header-and-subtitle-width-lg: 500px;
+
+.name-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    svg {
+        width: $header-and-subtitle-width;
+        height: 60px;
+    }
+
+    width: 200px;
+    transform: translate(-44%, -50%);
+    @media only screen and (min-width: 768px) {
+        width: auto;
+        transform: translate(-50%, -50%);
+        svg {
+            width: $header-and-subtitle-width-lg;
+            height: 90px;
+        }
+    }
+}
+
+.titles {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+
+    @media only screen and (min-width: 768px) {
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+    }
+}
+
+.text-content-wrapper {
+    height: min-content;
+    width: $header-and-subtitle-width;
+    overflow: hidden;
+
+    @media only screen and (min-width: 768px) {
+        width: min-content;
+    }
+}
+
+.author-img {
+    height: 0;
+    animation: author-img-reveal 0.5s ease var(--intro-delay) forwards;
+}
+
+.name-wrapper svg:hover {
+    // animation: floating 3s ease-in-out infinite;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.text-line {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    animation: dash 1.5s linear forwards, filling 2s ease-in forwards, rainbow 1.5s linear forwards;
+    // animation: dash 1.5s linear forwards, filling 2s ease-in forwards;
+
+    @media only screen and (min-width: 768px) {
+        font-size: 100px;
+    }
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.text-line text {
+    font-weight: normal;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        stroke: violet;
+    }
+    15% {
+        stroke: indigo;
+    }
+    30% {
+        stroke: blue;
+    }
+    45% {
+        stroke: green;
+    }
+    60% {
+        stroke: yellow;
+    }
+    75% {
+        stroke: orange;
+    }
+    90% {
+        stroke: red;
+    }
+    100% {
+        stroke: indigo;
+    }
+}
+
+@keyframes filling {
+    0%,
+    60% {
+        fill: var(--heading-text);
+        fill-opacity: 0;
+        stroke-width: 1;
+    }
+    100% {
+        fill: var(--heading-text);
+        fill-opacity: 1;
+        stroke-width: 0;
+    }
+}
+
+@keyframes scale-motion {
+    0% {
+        filter: blur(0);
+    }
+    50% {
+        filter: blur(1px);
+    }
+    100% {
+        filter: blur(0);
+    }
+}
+
+@keyframes author-img-reveal {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        height: 150px;
+        // margin-bottom: 50px;
+        opacity: 1;
+    }
+}
+
+/* ----------------------------- SUB-TITLE TYLES ---------------------------- */
+
+.subtitle {
+    @media only screen and (min-width: 768px) {
+        font-size: 18px;
+    }
+    font-size: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    color: var(--subtitle-text);
+    transform: translate(0, 100%);
+    transform: translate(0, 50px);
+    animation: opacitizer 1s ease-out 2s forwards;
+    transition: all 0.2s ease !important;
+}
+
+.subtitle-wrapper {
+    width: $header-and-subtitle-width;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    @media only screen and (min-width: 768px) {
+        animation: sub-align 0.5s ease var(--intro-delay) forwards;
+        width: $header-and-subtitle-width-lg;
+    }
+}
+
+@keyframes sub-align {
+    to {
+        transform: translate(-108px, 0);
+    }
+}
+
+@keyframes opacitizer {
+    to {
+        opacity: var(--intro-text-opacity);
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes q-opacitizer {
+    to {
+        opacity: 0.5;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 8px);
+    }
+    100% {
+        transform: translate(0, 0px);
+    }
+}
+
+/* -------------------------------- INTRO-BOX ------------------------------- */
+.intro-box {
+    box-sizing: border-box;
+    opacity: 0;
+    opacity: var(--intro-text-opacity);
+    height: 0px;
+    width: $header-and-subtitle-width;
+    border-radius: 4px;
+    margin-top: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: var(--subtitle-text);
+    font-weight: 500;
+    padding-left: 0;
+    font-size: 15px;
+    font-family: "Edu SA Beginner", cursive;
+    // background-color: var(--social-bg);
+    animation: intro-box-reveal 1s ease var(--intro-delay) forwards;
+
+    @media only screen and (min-width: 768px) {
+        font-size: 18px;
+        width: $header-and-subtitle-width-lg;
+        padding-left: 20px;
+    }
+
+    p {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes intro-box-reveal {
+    to {
+        height: 130px;
+    }
+}
+
+/* --------------------------------- Q-MARK --------------------------------- */
+
+.q1-box,
+.q1-box > svg {
+    position: absolute;
+    bottom: -30px;
+    right: -40px;
+
+    @media only screen and (min-width: 768px) {
+        bottom: -30px;
+        right: -60px;
+    }
+
+    height: 50px !important;
+    width: 50px !important;
+}
+
+.q2-box,
+.q2-box > svg {
+    position: absolute;
+    top: 0px;
+    left: -60px;
+
+    @media only screen and (min-width: 768px) {
+        top: -20px;
+        left: -100px;
+    }
+
+    transform: rotate(90deg);
+    height: 50px !important;
+    width: 50px !important;
+}
+
+.q-mark {
+    fill: var(--heading-text);
+    opacity: 0;
+    transition: all 0.1s ease !important;
+    animation: q-opacitizer 1s ease var(--intro-delay) forwards;
+}
