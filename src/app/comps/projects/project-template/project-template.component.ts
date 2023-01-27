@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AppVariablesService } from 'src/app/app-variables.service';
 import { PlatformView, Project } from 'src/app/models/project';
 
 @Component({
@@ -12,7 +13,7 @@ export class ProjectTemplateComponent implements OnInit {
 
   colorPalette = ["#78909C", "#26A69A", "#FF7043", "#5C6BC0", "#9CCC65"];
   labelColor: string[] = [];
-  constructor() { }
+  constructor(private appVariables: AppVariablesService) { }
 
   ngOnInit(): void {
     this.project.labels.forEach((e) => {
@@ -36,6 +37,15 @@ export class ProjectTemplateComponent implements OnInit {
     }
     else {
       return className + "web";
+    }
+  }
+
+  public openImagePreview(currentImageIndex: number ) {
+    this.appVariables.showImagePreviewModal = true;
+    this.appVariables.previewData = {
+      imageList: this.project.imageList,
+      currentImage: currentImageIndex,
+      platform: this.project.platformView,
     }
   }
 

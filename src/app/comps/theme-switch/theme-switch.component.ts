@@ -11,6 +11,7 @@ export class ThemeSwitchComponent {
   constructor(public appVariable: AppVariablesService) { }
 
   setTheme(): void {
+    console.log('clicked');
     this.appVariable.switchTheme(!this.appVariable.darkTheme);
   }
 

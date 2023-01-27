@@ -1,3 +1,14 @@
-<div class="img-preview-wrapper">
-  <p>jel</p>
+<div class="img-preview-wrapper" *ngIf="showImagePreview">
+  <div class="content">
+
+    <div class="project-images">
+
+      <div class="project-image" *ngFor="let imgSrc of imageList; let i = index">
+        <div class="image-wrapper">
+          <img [ngClass]="getPlatformClass()" [src]="imgSrc" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

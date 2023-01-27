@@ -27,7 +27,7 @@ $card-width: 200px;
 }
 
 .card-over:hover {
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .card-wrapper {
@@ -38,8 +38,10 @@ $card-width: 200px;
 }
 
 .desc {
-    color: var(--section-heading-color);
+    color: var(--service-card-desc);
     opacity: 0.5;
+    font-weight: 700;
+
     font-weight: 100;
     font-size: 13px;
     line-height: 25px;

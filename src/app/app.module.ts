@@ -16,7 +16,11 @@ import { ServicesComponent } from './comps/services/services.component';
 import { ServiceItemComponent } from './comps/services/service-item/service-item.component';
 import { SkillsComponent } from './comps/skills/skills.component';
 import { ImagePreviewComponent } from './comps/projects/image-preview/image-preview.component';
+// import { LottieModule } from 'ngx-lottie';
 
+// export function playerFactory(): any {
+//   return import('lottie-web');
+// }
 
 @NgModule({
   declarations: [
