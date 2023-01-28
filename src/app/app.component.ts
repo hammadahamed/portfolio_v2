@@ -13,12 +13,11 @@ export class AppComponent implements OnInit {
     const themeData = localStorage.getItem(this.appVariables.darkThemeLocalRef);
     const darkTheme = themeData == 'true';
     this.appVariables.switchTheme(darkTheme);
-    // this.mouseNegator();
+    this.mouseNegator();
   }
 
   mouseNegator() {
-    window.addEventListener('scroll', function() {
-      var dom = this.document.getElementById('root-wrapper');
+      var dom = document.getElementById('root-wrapper');
       if(dom) {
         dom.style.overflow = "hidden";
         setTimeout(function() {
@@ -26,7 +25,6 @@ export class AppComponent implements OnInit {
           dom.style.overflow = "auto";
       }, 3000);
       }
-    });
   }
 
 
