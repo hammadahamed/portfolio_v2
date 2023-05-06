@@ -11,7 +11,7 @@ $header-and-subtitle-width-lg: 500px;
 
   svg {
     width: $header-and-subtitle-width;
-    height: 60px;
+    height: 40px;
   }
 
   width: 200px;
@@ -70,8 +70,10 @@ $header-and-subtitle-width-lg: 500px;
   border-radius: 5px;
   animation: author-img-reveal 0.5s ease var(--intro-delay) forwards;
 
+  margin-bottom: 20px;
   @media only screen and (min-width: 768px) {
-    margin-right: 50px;
+  margin-bottom: 0px;
+  margin-right: 50px;
   }
 
 }
