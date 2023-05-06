@@ -40,6 +40,8 @@ export class ProjectTemplateComponent implements OnInit {
     }
   }
 
+  bg:any;
+
   public openImagePreview(currentImageIndex: number ) {
     this.appVariables.showImagePreviewModal = true;
     this.appVariables.previewData = {

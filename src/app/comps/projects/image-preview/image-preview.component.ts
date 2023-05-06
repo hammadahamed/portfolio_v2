@@ -8,20 +8,23 @@ import { PlatformView } from 'src/app/models/project';
   styleUrls: ['./image-preview.component.scss'],
 })
 export class ImagePreviewComponent implements OnInit {
-  @Input() image: String = "";
+  @Input() image: String = '';
+  bg: any;
 
-  constructor(private appVariables: AppVariablesService) {
-  }
+  constructor(private appVariables: AppVariablesService) {}
 
   ngOnInit(): void {
     document.onkeydown = (evt) => {
       evt = evt || window.event;
       if (evt.keyCode == 27) {
-        this.appVariables.showImagePreviewModal = false
+        this.appVariables.showImagePreviewModal = false;
       }
     };
   }
 
+  closePreview(){
+    this.appVariables.showImagePreviewModal = false;
+  }
   get showImagePreview() {
     return this.appVariables.showImagePreviewModal;
   }
@@ -30,13 +33,15 @@ export class ImagePreviewComponent implements OnInit {
     return this.appVariables.previewData.imageList;
   }
 
-  public getPlatformClass(platform: PlatformView = this.appVariables.previewData.platform): string {
-    const className = "platform-view-";
+
+  public getPlatformClass(
+    platform: PlatformView = this.appVariables.previewData.platform
+  ): string {
+    const className = 'platform-view-';
     if (platform === PlatformView.mobile) {
-      return className + "mobile";
-    }
-    else {
-      return className + "web";
+      return className + 'mobile';
+    } else {
+      return className + 'web';
     }
   }
 }

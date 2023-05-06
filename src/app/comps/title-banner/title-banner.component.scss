@@ -4,7 +4,7 @@ $header-and-subtitle-width-lg: 500px;
 .name-wrapper {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 47%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -18,6 +18,8 @@ $header-and-subtitle-width-lg: 500px;
   transform: translate(-44%, -50%);
 
   @media only screen and (min-width: 768px) {
+    left: 50%;
+
     width: auto;
     transform: translate(-50%, -50%);
 
@@ -30,6 +32,13 @@ $header-and-subtitle-width-lg: 500px;
 
 .wrapper-flex {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: initial;
+  }
 }
 
 .titles {
@@ -57,9 +66,14 @@ $header-and-subtitle-width-lg: 500px;
 
 .author-img {
   height: 0;
+  margin-right: 0;
   border-radius: 5px;
-  margin-right: 50px;
   animation: author-img-reveal 0.5s ease var(--intro-delay) forwards;
+
+  @media only screen and (min-width: 768px) {
+    margin-right: 50px;
+  }
+
 }
 
 @keyframes author-img-reveal {
@@ -292,7 +306,7 @@ $header-and-subtitle-width-lg: 500px;
 
   @media only screen and (min-width: 768px) {
     bottom: -30px;
-    right: -60px;
+    right: -30px;
   }
 
   height: 50px !important;
@@ -303,10 +317,10 @@ $header-and-subtitle-width-lg: 500px;
 .q2-box>svg {
   position: absolute;
   top: 0px;
-  left: -60px;
+  left: -80px;
 
   @media only screen and (min-width: 768px) {
-    top: -20px;
+    top: -50px;
     left: -100px;
   }
 

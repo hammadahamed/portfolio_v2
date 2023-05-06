@@ -4,11 +4,26 @@ $avartar-diameter-lg: 36px;
 $avartar-diameter-mob: 25px;
 $avartar-diameter-mob-lg: 30px;
 
+@keyframes expansion-web {
+  to {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      height: 40px;
+  }
+}
+
+
+@keyframes expansion-mob {
+  to {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      height: 30px;
+  }
+}
+
 .d-card {
     z-index: 100000;
     overflow: hidden;
-    height: 0;
-    width: 0;
     border-radius: 0px 0px 10px 10px;
     background-color: var(--social-bg);
     // background-color: transparent;
@@ -16,18 +31,22 @@ $avartar-diameter-mob-lg: 30px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    right: -1px;
     top: 0;
-    transform: translate(50%, 0);
-    animation: expansion 0.5s ease 4.2s forwards;
-    transition: all 0.5s ease;
+    right: 50%;
+    // height: 40px !important;
+    // width: 180px !important;
+    height: 0;
     width: 180px;
+
+    transform: translate(50%, 0);
+    transition: all 0.5s ease;
+    animation: expansion-mob 0.5s ease 4.2s forwards;
 
     @media only screen and (min-width: 768px) {
         width: 230px;
         right: 50%;
-        animation: expansion2 0.5s ease 4.2s forwards;
-    }
+        animation: expansion-web 0.5s ease 4.2s forwards;
+      }
 }
 
 .circle-avatars {
@@ -62,18 +81,4 @@ img {
     transform: translate(0, -2.5px);
 }
 
-@keyframes expansion {
-    to {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        height: 40px;
-    }
-}
 
-@keyframes expansion2 {
-    to {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        height: 40px;
-    }
-}
