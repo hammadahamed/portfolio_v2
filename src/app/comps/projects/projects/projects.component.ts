@@ -39,6 +39,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
           )[0];
 
           this.showRightCheveron(chevronLeft, chevronRight);
+          this.setChevronEvent(chevronRight, chevronLeft, outerDiv);
         }
       }, 3000);
     });
@@ -81,9 +82,43 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
           this.showRightCheveron(chevronLeft, chevronRight);
         } else if (atRightExtent) {
           this.showLeftCheveron(chevronLeft, chevronRight);
+        } else {
+          chevronLeft.classList.add(this.visibleClassName);
+          chevronRight.classList.add(this.visibleClassName);
         }
       } else {
         console.log('outerDiv not Found !');
+      }
+    });
+  }
+
+  setChevronEvent(right: any, left: any, outerDiv: any) {
+    // Chevron click handle
+    right.addEventListener('click', () => {
+      console.log(
+        'right event => ',
+        outerDiv.scrollLeft,
+        ' =  ',
+        outerDiv.scrollLeft,
+        ' + ',
+        outerDiv.clientWidth
+      );
+      if (outerDiv != undefined && outerDiv.scrollLeft != undefined) {
+        outerDiv.scrollLeft = outerDiv?.scrollLeft + outerDiv?.clientWidth;
+        console.log('result  = ', outerDiv.scrollLeft);
+      }
+    });
+
+    left.addEventListener('click', () => {
+      console.log(
+        'left event => ',
+        outerDiv.scrollLeft,
+        ' - ',
+        outerDiv.clientWidth
+      );
+
+      if (outerDiv != undefined && outerDiv.scrollLeft != undefined) {
+        outerDiv.scrollLeft = outerDiv?.scrollLeft - outerDiv?.clientWidth;
       }
     });
   }
@@ -99,7 +134,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   }
 
   projects: Project[] = [
-
     new Project(
       'CashFlow',
       "In simple terms, this app is a mix of Khatabook, splitwise and Finance Calculators in one place. I'm developing this app as a hobby to prove clients that Complex UI/UX and logic (in other word, highly complex sofwares) are my favourite cup tea and I can nail them. \nWith Firebase authentication, persistance, Dark Theme.",
