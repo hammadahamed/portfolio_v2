@@ -1,3 +1,9 @@
+$web-height-s: 180px;
+$mobile-height-s: 300px;
+
+$web-height-l: 250px;
+$mobile-height-l: 300px;
+
 .project-wrapper {
   gap: 50px;
   margin-left: 10px;
@@ -106,7 +112,7 @@
 }
 
 .platform-view-mobile {
-  height: 300px;
+  height: $mobile-height-s;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -116,10 +122,10 @@
 }
 
 .platform-view-web {
-  height: 180px;
+  height: $web-height-s;
 
   @media only screen and (min-width: 768px) {
-    height: 250px;
+    height: $web-height-l;
   }
 
   border-radius: 15px;
@@ -151,20 +157,125 @@
   color: red;
 }
 
-.chevron {
-  height: 80px;
-  width: 40px;
+
+
+#scroll-left,
+#scroll-right {
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: absolute;
-  right: -45px;
-  top: 47%;
-  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  background-color: transparent;
+  svg {
+    cursor: pointer;
+  }
 }
 
-.scroll-indicator-chevron {
-  height: 20px;
-  width: 20px;
-  fill: var(--section-heading-color);
+svg {
+  transition: none 0s;
+  path {
+    transition: none 0s;
+  }
+}
+
+.project-images {
+  #scroll-left,
+  #scroll-right {
+    visibility: hidden;
+
+    @media only screen and (min-width: 768px) {
+      // visibility: hidden;
+    }
+
+    transition: none 0s;
+  }
+}
+
+#scroll-left.make-visible, #scroll-right.make-visible {
+  visibility: visible !important;
+}
+
+// MOBILE
+.platform-view-mobile-wrap {
+  #scroll-right {
+    width: 50px;
+    height: $mobile-height-s;
+    position: absolute;
+    right: -30px;
+
+    @media only screen and (min-width: 768px) {
+      right: 110;
+      // background-color: transparent;
+    }
+
+    z-index: 10000;
+  }
+
+  #scroll-left {
+    width: 50px;
+    height: $mobile-height-l;
+    position: absolute;
+    z-index: 10000;
+    margin-left: -60px;
+    @media only screen and (min-width: 768px) {
+    margin-left: -70px;
+
+    }
+
+  }
+}
+
+
+// WEB
+.platform-view-web-wrap {
+  #scroll-right {
+    width: 50px;
+    height: $web-height-s;
+    position: absolute;
+    right: -30px;
+    z-index: 10000;
+
+    @media only screen and (min-width: 768px) {
+      height: $web-height-l;
+      right: -60;
+      // background-color: transparent;
+    }
+  }
+
+  #scroll-left {
+    width: 50px;
+    height: $web-height-s;
+    position: absolute;
+    z-index: 10000;
+    margin-left: -60px;
+
+    @media only screen and (min-width: 768px) {
+      height: $web-height-l;
+      margin-left: -70px;
+    }
+  }
+
+}
+
+.chevron-container {
+  height: 60px;
+  width: 30px;
+  border-radius: 6px;
+  background-color: var(--projects-chevron-color);
+  transition: none 0s;
+  // padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    transition: none 0s;
+    height: 25px;
+    width: 25px;
+
+
+    path {
+      transition: none 0s;
+
+    }
+  }
 }

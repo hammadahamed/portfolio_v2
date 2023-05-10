@@ -25,7 +25,6 @@ export class SkillsComponent implements OnInit {
     "/assets/skills/nodejs.svg",
     "/assets/skills/typescript.svg",
     "/assets/skills/linux.png",
-    // "/assets/skills/github.png",
     "/assets/skills/python.svg",
   ]
 }

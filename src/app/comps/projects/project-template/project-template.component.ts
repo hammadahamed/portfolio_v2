@@ -20,8 +20,9 @@ export class ProjectTemplateComponent implements OnInit {
       this.labelColor.push(this.colorPalette[this.randomInt()])
     }
     );
-    console.log(this.project.projectName, this.labelColor)
   }
+
+
 
   prevRandomInt: number = 0;
   randomInt(): number {
@@ -39,8 +40,6 @@ export class ProjectTemplateComponent implements OnInit {
       return className + "web";
     }
   }
-
-  bg:any;
 
   public openImagePreview(currentImageIndex: number ) {
     this.appVariables.showImagePreviewModal = true;
