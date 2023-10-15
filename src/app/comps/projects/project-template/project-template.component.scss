@@ -103,6 +103,10 @@ $mobile-height-l: 300px;
     width: 100%;
     gap: 75px;
   }
+
+  @media only screen and (max-width: 768px) {
+    padding-left: 10px;
+  }
 }
 
 .image-wrapper {
@@ -205,11 +209,10 @@ svg {
     width: 50px;
     height: $mobile-height-s;
     position: absolute;
-    right: -20px;
+    right: -50px;
 
-    @media only screen and (min-width: 768px) {
-      right: 110;
-      // background-color: transparent;
+    @media only screen and (max-width: 768px) {
+      margin-right: 0px;
     }
 
     z-index: 10000;
@@ -220,11 +223,10 @@ svg {
     height: $mobile-height-l;
     position: absolute;
     z-index: 10000;
-    margin-left: -50px;
+    margin-left: -80px;
 
-    @media only screen and (min-width: 768px) {
-      margin-left: -70px;
-
+    @media only screen and (max-width: 768px) {
+      margin-left: -40px;
     }
 
   }
@@ -242,8 +244,16 @@ svg {
 
     @media only screen and (min-width: 768px) {
       height: $web-height-l;
-      right: -60;
+      right: -100;
       // background-color: transparent;
+    }
+
+    @media only screen and (max-width: 768px) {
+      right: -60px;
+    }
+
+    @media only screen and (max-width: 1600px) {
+      right: -55px;
     }
   }
 
@@ -252,12 +262,14 @@ svg {
     height: $web-height-s;
     position: absolute;
     z-index: 10000;
-    margin-left: -50px;
+    margin-left: -45px;
 
     @media only screen and (min-width: 768px) {
       height: $web-height-l;
-      margin-left: -70px;
+      margin-left: -90px;
     }
+
+
   }
 
 }
