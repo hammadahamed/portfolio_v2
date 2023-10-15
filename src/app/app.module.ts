@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './modules/home/home.component';
 import { TitleBannerComponent } from './comps/title-banner/title-banner.component';
 import { SocialButtonsComponent } from './comps/social-buttons/social-buttons.component';
 import { MatCardModule } from '@angular/material/card';
@@ -16,6 +15,9 @@ import { ServicesComponent } from './comps/services/services.component';
 import { ServiceItemComponent } from './comps/services/service-item/service-item.component';
 import { SkillsComponent } from './comps/skills/skills.component';
 import { ImagePreviewComponent } from './comps/projects/image-preview/image-preview.component';
+import { FooterComponent } from './comps/footer/footer.component';
+import { EmploymentHistoryComponent } from './comps/employment-history/employment-history.component';
+import { HomeComponent } from './home/home.component';
 // import { LottieModule } from 'ngx-lottie';
 
 // export function playerFactory(): any {
@@ -35,7 +37,9 @@ import { ImagePreviewComponent } from './comps/projects/image-preview/image-prev
     ServicesComponent,
     ServiceItemComponent,
     SkillsComponent,
-    ImagePreviewComponent
+    ImagePreviewComponent,
+    FooterComponent,
+    EmploymentHistoryComponent
   ],
   imports: [
     BrowserModule,

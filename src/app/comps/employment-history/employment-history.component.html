@@ -1,0 +1,46 @@
+<div class="section-heading-wrapper">
+  <p class="section-heading">ORGANIZATIONS</p>
+</div>
+<br>
+<br>
+<div class="employment-history-wrapper">
+
+  <div class="horizontal timeline">
+    <div class="line" [ngStyle]="{'width': getLineLength}"></div>
+
+    <div class="steps">
+
+      <!-- INFO CARD -->
+      <div class="step" *ngFor="let e of employments" [ngClass]="{'current': e.current}">
+        <span>
+          <div class="info-chrono-name">
+            <p>{{e.year}}</p>
+          </div>
+          <div class="info-box">
+            <br>
+            <img src="{{e.logo}}" alt="Circular Image" class="circular-image">
+
+            <div>
+              <p class="desg">{{e.designation}}</p>
+            </div>
+          </div>
+
+        </span>
+      </div>
+
+
+      <!-- <div class="step">
+        <span>Sent to logistics</span>
+      </div>
+      <div class="step">
+        <span>In preparation</span>
+      </div>
+      <div class="step">
+        <span>Shipped</span>
+      </div> -->
+
+    </div>
+
+  </div>
+
+</div>

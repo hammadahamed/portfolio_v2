@@ -32,7 +32,7 @@ $mobile-height-l: 300px;
 }
 
 .description {
-  text-align: justify;
+  text-align: start;
   font-weight: 400;
   color: var(--project-description-color);
   line-height: 25px;
@@ -166,6 +166,7 @@ $mobile-height-l: 300px;
   align-items: center;
   border-radius: 6px;
   background-color: transparent;
+
   svg {
     cursor: pointer;
   }
@@ -173,12 +174,14 @@ $mobile-height-l: 300px;
 
 svg {
   transition: none 0s;
+
   path {
     transition: none 0s;
   }
 }
 
 .project-images {
+
   #scroll-left,
   #scroll-right {
     visibility: hidden;
@@ -191,7 +194,8 @@ svg {
   }
 }
 
-#scroll-left.make-visible, #scroll-right.make-visible {
+#scroll-left.make-visible,
+#scroll-right.make-visible {
   visibility: visible !important;
 }
 
@@ -217,8 +221,9 @@ svg {
     position: absolute;
     z-index: 10000;
     margin-left: -50px;
+
     @media only screen and (min-width: 768px) {
-    margin-left: -70px;
+      margin-left: -70px;
 
     }
 
