@@ -35,6 +35,7 @@ $mobile-height-l: 300px;
   text-align: start;
   font-weight: 400;
   color: var(--project-description-color);
+  font-family: 'Poppins';
   line-height: 23px;
 }
 
@@ -59,7 +60,9 @@ $mobile-height-l: 300px;
 
 .label>p {
   font-size: 11px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Poppins';
   color: white;
   padding: 2.5px;
   padding-left: 10px;

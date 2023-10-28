@@ -1,0 +1,16 @@
+<div class="rw-w">
+  <p class="section-heading">RECENT WORKS <span class="rt">.,</span></p>
+  <br>
+  <br>
+  <div class="rw-c-w">
+    <a class="recent-img-w" href={{rw.link}} target="_blank" rel="noopener noreferrer" *ngFor="let rw of recentWorks">
+      <div class="goto-site">
+        <p>View Website</p>
+      </div>
+      <div>
+        <img class="recent-img" src={{rw.assetPath}} alt="" srcset="">
+      </div>
+    </a>
+  </div>
+
+</div>

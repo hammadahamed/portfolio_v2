@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     const themeData = localStorage.getItem(this.appVariables.darkThemeLocalRef);
     const darkTheme = themeData == 'true';
     this.appVariables.switchTheme(darkTheme);
-    this.mouseNegator();
+    // this.mouseNegator();
   }
 
   mouseNegator() {

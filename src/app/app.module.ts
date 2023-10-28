@@ -18,6 +18,7 @@ import { ImagePreviewComponent } from './comps/projects/image-preview/image-prev
 import { FooterComponent } from './comps/footer/footer.component';
 import { EmploymentHistoryComponent } from './comps/employment-history/employment-history.component';
 import { HomeComponent } from './home/home.component';
+import { RecentWorksComponent } from './comps/recent-works/recent-works.component';
 // import { LottieModule } from 'ngx-lottie';
 
 // export function playerFactory(): any {
@@ -39,7 +40,8 @@ import { HomeComponent } from './home/home.component';
     SkillsComponent,
     ImagePreviewComponent,
     FooterComponent,
-    EmploymentHistoryComponent
+    EmploymentHistoryComponent,
+    RecentWorksComponent
   ],
   imports: [
     BrowserModule,

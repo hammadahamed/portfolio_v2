@@ -73,6 +73,7 @@ body {
   --service-svg-color: rgba(45, 45, 45, 1);
   --projects-chevron-color: rgba(0, 0, 0, 1);
   --footer-color: rgba(233, 233, 233, 1);
+  --footer-social-svg-fill: rgb(97, 97, 97);
 }
 
 [data-theme="dark"] {
@@ -96,7 +97,7 @@ body {
   --service-svg-color: rgb(235, 231, 231);
   --projects-chevron-color: rgba(0, 0, 0, 1);
   --footer-color: rgba(22, 22, 22, 1);
-
+  --footer-social-svg-fill: rgb(160, 160, 160);
 }
 
 .cta-button {
@@ -126,6 +127,15 @@ body {
   p:hover {
     opacity: .5;
   }
+}
+
+.rt {
+  -webkit-text-fill-color: var(--section-heading-color);
+  opacity: 0.7;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: var(--heading-stroke-width);
+  -webkit-text-stroke-color: var(--section-heading-color);
+  font-size: 45px;
 }
 
 /* ---------------------------- CUSTOM SCROLL-BAR --------------------------- */

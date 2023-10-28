@@ -43,3 +43,4 @@ Thumbs.db
 
 .firebaserc
 firebase.json
+hosting.*

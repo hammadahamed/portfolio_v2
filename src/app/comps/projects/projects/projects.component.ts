@@ -150,7 +150,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         '/assets/cashflow/img10.jpg',
         '/assets/cashflow/img11.jpg',
       ],
-      ['Mobile App', 'In-progress', 'Personal Product', 'UI/UX', 'Flutter'],
+      ['Mobile App', 'Project-Dropped', 'Personal Product', 'UI/UX', 'Flutter'],
       PlatformView.mobile
     ),
     new Project(
